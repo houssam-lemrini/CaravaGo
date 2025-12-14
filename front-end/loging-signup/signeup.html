@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaravaGo - Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/signeup.css">
+</head>
+
+<body>
+    <div class="signup-container glass-card">
+        <div class="signup-header">
+            <h2>Create Account</h2>
+            <p>Join CaravaGo today</p>
+        </div>
+        <form id="signupForm" class="signup-form">
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="John Doe" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn-signup">Sign Up</button>
+        </form>
+        <div class="signup-footer">
+            <p>Already have an account? <a href="loging.html">Log in</a></p>
+        </div>
+    </div>
+    <script src="../assets/js/signeup.js"></script>
+</body>
+
+</html>
