@@ -21,6 +21,7 @@ body {
 }
 
 /* Header */
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -29,8 +30,7 @@ body {
     z-index: 1000;
     background: transparent;
     transition: background 0.3s ease;
-    max-height: 70px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .header.scrolled {
@@ -43,8 +43,10 @@ body {
     padding: 0 2rem;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     height: 70px;
+    overflow: visible;
 }
 
 .nav-container {
@@ -54,7 +56,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    height: 100%;
 }
 
 .logo {
@@ -73,7 +74,7 @@ body {
 
 .logo img {
     height: 100%;
-    max-height: 70px;
+    max-height: 150px;
     width: auto;
     object-fit: contain;
     margin: 0;
@@ -84,6 +85,8 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    position: relative;
+    overflow: visible;
 }
 
 .btn-download {
@@ -129,13 +132,15 @@ body {
 }
 
 /* Dropdown Styles */
+/* Dropdown Styles */
 .dropdown {
     position: relative;
+    overflow: visible;
 }
 
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 15px);
     right: 0;
     background: white;
     border-radius: 10px;
@@ -145,8 +150,9 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1001;
+    z-index: 10000;
     padding: 0.5rem 0;
+    margin-top: 5px;
 }
 
 .dropdown.active .dropdown-menu {
@@ -432,15 +438,22 @@ body.dark-theme .mobile-link {
     height: 100%;
 }
 
+/* Full hero image */
 .hero-image {
     width: 100%;
     height: 500px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    background: none; /* remove gradient background */
 }
 
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fill the whole frame without distortion */
+    display: block;
+}
 .stamp {
     position: absolute;
     top: 20px;
