@@ -59,32 +59,26 @@ function checkPasswordStrength(password) {
     if (!strengthBar || !strengthText) return;
 
     let strength = 0;
-    let feedback = '';
 
     // Length check
     if (password.length >= 8) strength++;
-    else feedback = 'Use at least 8 characters';
 
     // Lowercase check
     if (/[a-z]/.test(password)) strength++;
-    else if (!feedback) feedback = 'Add lowercase letters';
 
     // Uppercase check
     if (/[A-Z]/.test(password)) strength++;
-    else if (!feedback) feedback = 'Add uppercase letters';
 
     // Number check
     if (/[0-9]/.test(password)) strength++;
-    else if (!feedback) feedback = 'Add numbers';
 
     // Special character check
     if (/[^A-Za-z0-9]/.test(password)) strength++;
-    else if (!feedback) feedback = 'Add special characters';
 
     // Update UI
     strengthBar.className = 'strength-bar';
     if (password.length === 0) {
-        strengthText.textContent = 'Password strength';
+        strengthText.textContent = '';
         return;
     }
 
@@ -95,39 +89,29 @@ function checkPasswordStrength(password) {
     } else if (strength <= 4) {
         strengthBar.classList.add('medium');
         strengthText.textContent = 'Medium password';
-        strengthText.style.color = '#F6AD55';
+        strengthText.style.color = '#1f6b45';
     } else {
         strengthBar.classList.add('strong');
         strengthText.textContent = 'Strong password';
-        strengthText.style.color = '#38A169';
+        strengthText.style.color = '#2E8B57';
     }
 }
 
 // Setup signup validation
 function setupSignupValidation() {
-    const firstName = document.getElementById('firstName');
-    const lastName = document.getElementById('lastName');
+    const fullName = document.getElementById('fullName');
     const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
     const terms = document.getElementById('terms');
 
     // Real-time validation
-    if (firstName) {
-        firstName.addEventListener('blur', () => validateName(firstName, 'firstNameError'));
-    }
-
-    if (lastName) {
-        lastName.addEventListener('blur', () => validateName(lastName, 'lastNameError'));
+    if (fullName) {
+        fullName.addEventListener('blur', () => validateFullName(fullName, 'fullNameError'));
     }
 
     if (email) {
         email.addEventListener('blur', () => validateEmail(email, 'emailError'));
-    }
-
-    if (phone) {
-        phone.addEventListener('blur', () => validatePhone(phone, 'phoneError'));
     }
 
     if (password) {
@@ -158,7 +142,7 @@ function setupSigninValidation() {
 }
 
 // Validation functions
-function validateName(input, errorId) {
+function validateFullName(input, errorId) {
     const errorElement = document.getElementById(errorId);
     const value = input.value.trim();
     
@@ -167,13 +151,19 @@ function validateName(input, errorId) {
         return false;
     }
     
-    if (value.length < 2) {
-        showError(input, errorElement, 'Name must be at least 2 characters');
+    if (value.length < 3) {
+        showError(input, errorElement, 'Full name must be at least 3 characters');
         return false;
     }
     
     if (!/^[a-zA-Z\s-']+$/.test(value)) {
         showError(input, errorElement, 'Name can only contain letters, spaces, hyphens, and apostrophes');
+        return false;
+    }
+    
+    const nameParts = value.split(/\s+/).filter(part => part.length > 0);
+    if (nameParts.length < 2) {
+        showError(input, errorElement, 'Please enter your full name (first and last)');
         return false;
     }
     
@@ -200,24 +190,6 @@ function validateEmail(input, errorId) {
     return true;
 }
 
-function validatePhone(input, errorId) {
-    const errorElement = document.getElementById(errorId);
-    const value = input.value.trim();
-    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-    
-    if (!value) {
-        showError(input, errorElement, 'Phone number is required');
-        return false;
-    }
-    
-    if (!phoneRegex.test(value) || value.replace(/\D/g, '').length < 10) {
-        showError(input, errorElement, 'Please enter a valid phone number');
-        return false;
-    }
-    
-    showSuccess(input, errorElement);
-    return true;
-}
 
 function validatePassword(input, errorId) {
     const errorElement = document.getElementById(errorId);
@@ -298,20 +270,16 @@ function showSuccess(input, errorElement) {
 function handleSignup(e) {
     e.preventDefault();
     
-    const firstName = document.getElementById('firstName');
-    const lastName = document.getElementById('lastName');
+    const fullName = document.getElementById('fullName');
     const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
     const terms = document.getElementById('terms');
     
     // Validate all fields
     const isValid = 
-        validateName(firstName, 'firstNameError') &&
-        validateName(lastName, 'lastNameError') &&
+        validateFullName(fullName, 'fullNameError') &&
         validateEmail(email, 'emailError') &&
-        validatePhone(phone, 'phoneError') &&
         validatePassword(password, 'passwordError') &&
         validateConfirmPassword(password, confirmPassword, 'confirmPasswordError') &&
         validateTerms(terms, 'termsError');

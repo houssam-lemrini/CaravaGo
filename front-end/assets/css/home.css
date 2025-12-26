@@ -6,18 +6,15 @@
 
 :root {
     --forest-green: #2E8B57;
-    --fresh-green: #38A169;
-    --sunrise-orange: #F6AD55;
-    --travel-blue: #3182CE;
-    --light-cloud: #F7FAFC;
-    --dark-grey: #1A202C;
+    --neutral-slate: #1A202C;
+    --cloud-white: #F7FAFC;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     line-height: 1.6;
-    background-color: var(--light-cloud);
+    background-color: var(--cloud-white);
     overflow-x: hidden;
 }
 
@@ -75,7 +72,7 @@ body {
 }
 
 .btn-download {
-    background: var(--travel-blue);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -90,14 +87,14 @@ body {
 }
 
 .btn-download:hover {
-    background: #2C5F8D;
+    background: #1f6b45;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
 }
 
 .nav-link {
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -119,7 +116,7 @@ body {
 .user-icon, .menu-toggle {
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,14 +166,14 @@ body {
 
 .mobile-nav-link {
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     font-weight: 500;
     padding: 0.5rem 0;
     border-bottom: 1px solid #E2E8F0;
 }
 
 .btn-download-mobile {
-    background: var(--travel-blue);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 0.75rem 1rem;
@@ -188,7 +185,7 @@ body {
 }
 
 .btn-download-mobile:hover {
-    background: #2C5F8D;
+    background: #1f6b45;
 }
 
 /* Hero Section */
@@ -196,7 +193,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--forest-green) 0%, var(--travel-blue) 100%);
+    background: var(--forest-green);
     padding-top: 80px;
     position: relative;
     overflow: hidden;
@@ -254,11 +251,11 @@ body {
 
 .search-field input:focus {
     outline: none;
-    border-color: var(--fresh-green);
+    border-color: var(--forest-green);
 }
 
 .btn-search {
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -275,9 +272,9 @@ body {
 }
 
 .btn-search:hover {
-    background: #E69A3D;
+    background: #1f6b45;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 173, 85, 0.4);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
 }
 
 .hero-right {
@@ -313,7 +310,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 4rem 2rem;
-    background: var(--travel-blue);
+    background: var(--forest-green);
     color: white;
     max-width: 1400px;
     margin: 0 auto;
@@ -327,7 +324,7 @@ body {
 
 .feature-icon {
     font-size: 2rem;
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -377,15 +374,15 @@ body {
 }
 
 .deals-image {
-    background: linear-gradient(135deg, var(--fresh-green) 0%, var(--travel-blue) 100%);
+    background: var(--forest-green);
 }
 
 .reviews-image {
-    background: linear-gradient(135deg, var(--sunrise-orange) 0%, var(--fresh-green) 100%);
+    background: var(--forest-green);
 }
 
 .owner-image {
-    background: linear-gradient(135deg, var(--travel-blue) 0%, var(--forest-green) 100%);
+    background: var(--forest-green);
 }
 
 .card-content {
@@ -395,7 +392,7 @@ body {
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
 }
 
 .card p {
@@ -415,7 +412,7 @@ body {
 }
 
 .btn-card {
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -429,7 +426,7 @@ body {
 }
 
 .btn-card:hover {
-    background: #E69A3D;
+    background: #1f6b45;
     transform: translateX(5px);
 }
 
@@ -441,14 +438,14 @@ body {
 }
 
 .stars {
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
 
 .rating-text {
     font-weight: bold;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
 }
 
 .card-dark .rating-text {
@@ -468,7 +465,7 @@ body {
 }
 
 .section-label {
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -485,7 +482,7 @@ body {
     left: 0;
     width: 50px;
     height: 2px;
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
 }
 
 .section-title-group {
@@ -497,7 +494,7 @@ body {
 
 .section-title-group h2 {
     font-size: 2.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     line-height: 1.2;
 }
 
@@ -531,25 +528,25 @@ body {
 }
 
 .campervan {
-    background: linear-gradient(135deg, var(--fresh-green) 0%, var(--travel-blue) 100%);
+    background: var(--forest-green);
 }
 
 .large-campervan {
-    background: linear-gradient(135deg, var(--travel-blue) 0%, var(--fresh-green) 100%);
+    background: var(--forest-green);
 }
 
 .low-profile {
-    background: linear-gradient(135deg, var(--sunrise-orange) 0%, var(--fresh-green) 100%);
+    background: var(--forest-green);
 }
 
 .coachbuilt {
-    background: linear-gradient(135deg, var(--forest-green) 0%, var(--sunrise-orange) 100%);
+    background: var(--forest-green);
 }
 
 .vehicle-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
 }
 
 .vehicle-tagline {
@@ -567,7 +564,7 @@ body {
 }
 
 .vehicle-link {
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -577,7 +574,7 @@ body {
 }
 
 .vehicle-link:hover {
-    color: #E69A3D;
+    color: #1f6b45;
     transform: translateX(5px);
 }
 
@@ -604,7 +601,7 @@ body {
 
 .destinations .section-header h2 {
     font-size: 2.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin: 1rem 0;
 }
 
@@ -648,20 +645,20 @@ body {
 
 .location-icon {
     font-size: 1.5rem;
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(246, 173, 85, 0.1);
+    background: rgba(46, 139, 87, 0.1);
     border-radius: 50%;
     flex-shrink: 0;
 }
 
 .destination-info h4 {
     font-size: 1.2rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin-bottom: 0.3rem;
 }
 
@@ -692,28 +689,28 @@ body {
 }
 
 .city-btn {
-    background: var(--light-cloud);
+    background: var(--cloud-white);
     border: 2px solid #E2E8F0;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
 .city-btn:hover,
 .city-btn.active {
-    background: var(--fresh-green);
+    background: var(--forest-green);
     color: white;
-    border-color: var(--fresh-green);
+    border-color: var(--forest-green);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
 }
 
 .btn-rent-rv {
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -728,9 +725,9 @@ body {
 }
 
 .btn-rent-rv:hover {
-    background: #E69A3D;
+    background: #1f6b45;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 173, 85, 0.4);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
 }
 
 .btn-rent-rv::after {
@@ -762,7 +759,7 @@ body {
 .photo-placeholder {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--fresh-green) 0%, var(--travel-blue) 100%);
+    background: var(--forest-green);
     border-radius: 15px;
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
@@ -784,7 +781,7 @@ body {
 
 .community-text h2 {
     font-size: 2rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin: 1rem 0;
 }
 
@@ -816,7 +813,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -828,9 +825,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: #E69A3D;
+    background: #1f6b45;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 173, 85, 0.4);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
 }
 
 .btn-secondary {
@@ -865,7 +862,7 @@ body {
 .step-number {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     min-width: 60px;
 }
 
@@ -893,7 +890,7 @@ body {
 
 .europe-content h2 {
     font-size: 2.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin-bottom: 1.5rem;
 }
 
@@ -918,17 +915,17 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
 .country-btn:hover,
 .country-btn.active {
-    background: var(--fresh-green);
+    background: var(--forest-green);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
 }
 
 .peer-to-peer {
@@ -938,7 +935,7 @@ body {
 
 .peer-to-peer h2 {
     font-size: 2.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin-bottom: 1.5rem;
 }
 
@@ -971,14 +968,14 @@ body {
 .blog-image {
     width: 200px;
     height: 200px;
-    background: linear-gradient(135deg, var(--fresh-green) 0%, var(--travel-blue) 100%);
+    background: var(--forest-green);
     border-radius: 15px;
     flex-shrink: 0;
 }
 
 .blog-content h3 {
     font-size: 1.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin-bottom: 1rem;
 }
 
@@ -989,19 +986,19 @@ body {
 }
 
 .blog-link {
-    color: var(--sunrise-orange);
+    color: var(--forest-green);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .blog-link:hover {
-    color: #E69A3D;
+    color: #1f6b45;
 }
 
 .footer-newsletter h3 {
     font-size: 1.5rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     margin-bottom: 1rem;
 }
 
@@ -1026,11 +1023,11 @@ body {
 
 .newsletter-form input:focus {
     outline: none;
-    border-color: var(--fresh-green);
+    border-color: var(--forest-green);
 }
 
 .btn-newsletter {
-    background: var(--sunrise-orange);
+    background: var(--forest-green);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -1041,9 +1038,9 @@ body {
 }
 
 .btn-newsletter:hover {
-    background: #E69A3D;
+    background: #1f6b45;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 173, 85, 0.4);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
 }
 
 .footer-bottom {
@@ -1102,18 +1099,18 @@ body {
     justify-content: center;
     text-decoration: none;
     font-size: 1.2rem;
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     transition: all 0.3s;
 }
 
 .social-icon:hover {
-    background: var(--fresh-green);
+    background: var(--forest-green);
     color: white;
     transform: translateY(-2px);
 }
 
 .footer-column h4 {
-    color: var(--dark-grey);
+    color: var(--neutral-slate);
     font-size: 1rem;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
