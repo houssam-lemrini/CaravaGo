@@ -1,39 +1,42 @@
 .signup-container {
     width: 100%;
-    max-width: 450px;
-    padding: 40px;
+    max-width: 480px;
+    padding: 48px;
     text-align: center;
 }
 
 .signup-header h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+    color: var(--forest-green);
 }
 
 .signup-header p {
     color: var(--text-muted);
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+    font-size: 1.1rem;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark-grey);
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px 16px;
+    padding: 14px 18px;
     background: var(--input-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
     color: var(--text-color);
     font-size: 1rem;
     outline: none;
@@ -41,31 +44,35 @@
 }
 
 .input-group input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    border-color: var(--fresh-green);
+    box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
 }
 
 .btn-signup {
     width: 100%;
-    padding: 14px;
-    background: var(--primary-color);
+    padding: 16px;
+    background: linear-gradient(135deg, var(--forest-green) 0%, var(--fresh-green) 100%);
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .btn-signup:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(46, 139, 87, 0.3);
 }
 
 .signup-footer {
-    margin-top: 25px;
-    font-size: 0.9rem;
+    margin-top: 32px;
+    font-size: 0.95rem;
     color: var(--text-muted);
+}
+
+.signup-footer a {
+    font-weight: 600;
 }
