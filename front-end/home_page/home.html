@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaravaGo - Choose your route, Travel your way</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/home.css">
 </head>
 <body>
@@ -16,11 +17,16 @@
                     <span>CaravaGo</span>
                 </div>
                 <div class="nav-links">
-                    <button class="btn-download">Download the app</button>
+                    <button class="btn-download"><i class="fas fa-download"></i> Download the app</button>
                     <a href="#" class="nav-link">Create a listing</a>
-                    <a href="#" class="nav-link">Help <span class="chevron">▼</span></a>
-                    <div class="user-icon">👤</div>
-                    <div class="menu-toggle">☰</div>
+                    <a href="#" class="nav-link">Help <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="user-icon"><i class="fas fa-user"></i></div>
+                    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#" class="mobile-nav-link">Create a listing</a>
+                    <a href="#" class="mobile-nav-link">Help</a>
+                    <button class="btn-download-mobile"><i class="fas fa-download"></i> Download the app</button>
                 </div>
             </div>
         </nav>
@@ -53,19 +59,19 @@
     <!-- Features Section -->
     <section class="features">
         <div class="feature-item">
-            <div class="feature-icon">⭐</div>
+            <div class="feature-icon"><i class="fas fa-star"></i></div>
             <p>Rated <strong>4.9/5</strong> with <strong>369,245 reviews</strong></p>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">🚐</div>
+            <div class="feature-icon"><i class="fas fa-van-shuttle"></i></div>
             <p>The largest selection of vehicles in Europe</p>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">🌍</div>
+            <div class="feature-icon"><i class="fas fa-globe"></i></div>
             <p>Departing trips from Europe or elsewhere</p>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">🛡️</div>
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
             <p>Insurance and breakdown assistance included</p>
         </div>
     </section>
@@ -153,7 +159,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #38A169 0%, #2E8B57 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Chianti</h4>
                         <p>Florence</p>
@@ -163,7 +169,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #3182CE 0%, #2E8B57 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Playa de Benijo</h4>
                         <p>Tenerife</p>
@@ -173,7 +179,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #F6AD55 0%, #38A169 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Peak District</h4>
                         <p>Manchester</p>
@@ -183,7 +189,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #3182CE 0%, #F6AD55 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Neuschwanstein Castle</h4>
                         <p>Bavaria</p>
@@ -193,7 +199,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #2E8B57 0%, #3182CE 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Coastal Route</h4>
                         <p>Portugal</p>
@@ -203,7 +209,7 @@
             <div class="destination-card">
                 <div class="destination-image" style="background: linear-gradient(135deg, #F6AD55 0%, #2E8B57 100%);"></div>
                 <div class="destination-info">
-                    <span class="location-icon">📍</span>
+                    <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h4>Mountain Pass</h4>
                         <p>Switzerland</p>
@@ -337,10 +343,10 @@
                 <p>CaravaGo connects holidaymakers with local campervan and motorhome owners across Europe through its secure platform. Hire the motorhome of your dreams, at home or abroad, with comprehensive insurance and support included. Connect, share and escape with CaravaGo!</p>
                 <p class="trusted-shops">3.54/5 on 306 customer reviews on Trusted Shops</p>
                 <div class="social-icons">
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">🐦</a>
-                    <a href="#" class="social-icon">📌</a>
-                    <a href="#" class="social-icon">👥</a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
             <div class="footer-links">

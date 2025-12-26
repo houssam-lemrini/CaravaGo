@@ -8,6 +8,34 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
 // Search functionality
 document.querySelector('.btn-search')?.addEventListener('click', function() {
     const pickup = document.getElementById('pickup-location')?.value;
